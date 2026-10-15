@@ -1,0 +1,15 @@
+.env
+*.env
+!.env.example
+__pycache__/
+*.pyc
+.pytest_cache/
+footballiq.db
+data/raw/
+data/processed/_filtered/
+node_modules/
+frontend/dist/
+.git/
+*.log
+reports/
+notebooks/

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Color: pitch-at-night, not generic near-black */
+  --color-bg: #0F1613;
+  --color-panel: #161F1B;
+  --color-panel-raised: #1C2620;
+  --color-border: rgba(237, 239, 236, 0.08);
+  --color-border-strong: rgba(237, 239, 236, 0.16);
+
+  --color-text: #EDEFEC;
+  --color-text-muted: #8B9A94;
+  --color-text-faint: #5A655F;
+
+  /* the one bold pairing: amber = predicted/model, blue = actual/real */
+  --color-amber: #E8B550;
+  --color-amber-dim: #6B5730;
+  --color-blue: #4FA8E0;
+  --color-blue-dim: #2C4E63;
+
+  --color-positive: #6FBF8A;
+  --color-negative: #D9705C;
+
+  --font-display: "Oswald", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-panel-raised);
+  border-radius: 4px;
+}
+
+/* Minimal markdown styling for chat bubbles (no typography plugin) */
+.prose-chat p { margin: 0.4em 0; }
+.prose-chat p:first-child { margin-top: 0; }
+.prose-chat p:last-child { margin-bottom: 0; }
+.prose-chat ul, .prose-chat ol { margin: 0.4em 0; padding-left: 1.25em; }
+.prose-chat li { margin: 0.15em 0; }
+.prose-chat strong { color: var(--color-amber); font-weight: 600; }
+.prose-chat code {
+  background: var(--color-panel-raised);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+.prose-chat a { color: var(--color-blue); text-decoration: underline; }
+.prose-chat h1, .prose-chat h2, .prose-chat h3 { margin: 0.5em 0 0.3em; font-size: 1em; font-weight: 600; }

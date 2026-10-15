@@ -1,0 +1,32 @@
+age
+height_in_cm
+appearances
+minutes_played
+goals
+assists
+goals_per_90
+assists_per_90
+yellow_cards
+red_cards
+club_prestige_log
+subpos_Attacking Midfield
+subpos_Central Midfield
+subpos_Centre-Back
+subpos_Centre-Forward
+subpos_Defensive Midfield
+subpos_Goalkeeper
+subpos_Left Midfield
+subpos_Left Winger
+subpos_Left-Back
+subpos_Right Midfield
+subpos_Right Winger
+subpos_Right-Back
+subpos_Second Striker
+foot_both
+foot_left
+foot_right
+league_ES1
+league_FR1
+league_GB1
+league_IT1
+league_L1
